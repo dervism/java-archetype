@@ -48,7 +48,7 @@
         <include>.gitkeep</include>
       </includes>
     </fileSet>
-    <fileSet>
+    <fileSet filtered="true">
       <directory />
       <includes>
         <include>.gitignore</include>

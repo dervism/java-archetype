@@ -1,7 +1,7 @@
 # A simple Maven Java archetype
 
-Generates a Java project with
+Generates a Maven Java project with
 
-- JDK 15 - with preview features enabled
+- JDK 16 - with preview features enabled
 - Complete Maven setup with resources folders
 - JUnit 5
