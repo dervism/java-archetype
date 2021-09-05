@@ -4,19 +4,20 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>no.dervis.archetype</groupId>
-  <artifactId>java-archetype</artifactId>
+  <groupId>no.dervis.maven</groupId>
+  <artifactId>java-starter</artifactId>
   <version>1.0</version>
   <packaging>maven-archetype</packaging>
   <name>Java Starter Archetype</name>
 
   <properties>
-    <java.version>15</java.version>
+    <java.version>16</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <maven.compiler.release>${java.version}</maven.compiler.release>
     <dollar>$</dollar>
+    <moduleName>${project.artifactId}</moduleName>
   </properties>
 
   <build>

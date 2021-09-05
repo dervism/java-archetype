@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>${groupId}</groupId>
-  <artifactId>${artifactId}</artifactId>
+  <groupId>${project.groupId}</groupId>
+  <artifactId>${project.artifactId}</artifactId>
   <version>${version}</version>
   <packaging>jar</packaging>
-  <name>${artifactId}</name>
+  <name>${project.artifactId}</name>
 
   <properties>
     <java.version>${jdkVersion}</java.version>
@@ -22,7 +22,7 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.7.0</version>
+      <version>5.7.2</version>
     </dependency>
   </dependencies>
 
@@ -38,7 +38,7 @@
           </plugin>
           <plugin>
               <artifactId>maven-surefire-plugin</artifactId>
-              <version>2.22.1</version>
+              <version>2.22.2</version>
               <configuration>
                   <argLine>--enable-preview</argLine>
               </configuration>

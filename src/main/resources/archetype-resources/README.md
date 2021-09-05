@@ -1,6 +1,6 @@
 # ${artifactId}
 
-Sample starter pom.xml file.
+Java starter pom.xml file.
 
 #### Clean and compile
 
