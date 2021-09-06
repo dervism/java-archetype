@@ -16,5 +16,8 @@ mvn archetype:generate -DarchetypeGroupId=no.dervis.maven \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
+                    -jdkVersion=16 \
                     -DinteractiveMode=false
 ```
+
+Change the `jdkVersion` property to change the JDK version.
