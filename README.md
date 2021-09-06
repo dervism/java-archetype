@@ -1,7 +1,8 @@
-# A simple Maven Java archetype
+# A simple Maven Archetype for Java
 
-Generates a Maven Java project with
+Generates a Maven project with
 
-- JDK 16 - with preview features enabled
-- Complete Maven setup with resources folders
+- JDK 16
 - JUnit 5
+
+You can change the Java version number when using the archetype from the commandline.
