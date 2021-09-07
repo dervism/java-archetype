@@ -7,6 +7,8 @@ Generates a Maven project with
 
 You can change the Java version number when using the archetype from the commandline.
 
+PS: The archetype is not yet published to Maven central. Clone and build the project locally if you want to test it.
+
 ## How to use
 
 ```
