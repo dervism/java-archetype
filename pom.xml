@@ -7,7 +7,13 @@
   <artifactId>java-starter</artifactId>
   <version>1.0</version>
   <packaging>maven-archetype</packaging>
+
   <name>java-starter</name>
+  <description>
+    A Maven archetype for generating Java projects
+    with configuration for enabling/disabling preview features.
+  </description>
+  <url>https://github.com/dervism/java-archetype</url>
 
   <properties>
     <java.version>16</java.version>
@@ -15,9 +21,85 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <maven.compiler.release>${java.version}</maven.compiler.release>
+    <repository.url>git@github.com:dervism/java-archetype.git</repository.url>
+    <nexus.url>https://s01.oss.sonatype.org</nexus.url>
   </properties>
 
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>dervism</id>
+      <name>Dervis Mansuroglu</name>
+      <email>dervis4@gmail.com</email>
+      <url>https://dervis.no</url>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>github.com</system>
+    <url>https://github.com/dervism/java-archetype/issues</url>
+  </issueManagement>
+
+  <scm>
+    <connection>scm:git:${repository.url}</connection>
+    <developerConnection>scm:git:${repository.url}</developerConnection>
+    <url>${repository.url}</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>${nexus.url}/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>${nexus.url}/service/local/staging/deploy/maven2</url>
+    </repository>
+  </distributionManagement>
+
   <build>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M4</version>
+        <configuration>
+          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>extras,gpg</releaseProfiles>
+          <tagNameFormat>${project.name}-@{project.version}</tagNameFormat>
+        </configuration>
+      </plugin>
+
+      <!-- Setup plugin for deployment to Maven Central. -->
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.8</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh</serverId>
+          <nexusUrl>${nexus.url}</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+      </plugin>
+
+    </plugins>
+
     <extensions>
       <extension>
         <groupId>org.apache.maven.archetype</groupId>
@@ -25,7 +107,6 @@
         <version>3.2.0</version>
       </extension>
     </extensions>
-
     <pluginManagement>
       <plugins>
         <plugin>
@@ -35,6 +116,78 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
   </build>
+
+  <profiles>
+    <!-- Creates additional artifacts that are required for deployment. -->
+    <profile>
+      <id>extras</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <!-- Create source code artifact. -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- Create javadoc artifact. -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.3.0</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <!-- Sign any created artifact. (Requires configuration of gpg on the executing machine.) -->
+    <profile>
+      <id>gpg</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <!-- Sign artifacts. -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+              <execution>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+                <configuration>
+                  <gpgArguments>
+                    <arg>--pinentry-mode</arg>
+                    <arg>loopback</arg>
+                  </gpgArguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
 </project>
