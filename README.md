@@ -18,8 +18,11 @@ mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
-                    -jdkVersion=16 \
+                    -DjdkVersion=16 \
+                    -DjavaPreviewFeatures=yes \
                     -DinteractiveMode=false
 ```
 
 Change the `jdkVersion` property to change the JDK version.
+
+Change `javaPreviewFeatures` to `no` or `n` if you want to disable preview features
