@@ -50,7 +50,6 @@
     <connection>scm:git:${repository.url}</connection>
     <developerConnection>scm:git:${repository.url}</developerConnection>
     <url>${repository.url}</url>
-    <tag>java-starter-1.0.0</tag>
   </scm>
 
   <distributionManagement>
