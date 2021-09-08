@@ -1,4 +1,4 @@
 # ${artifactId}
 
-Java starter pom.xml file.
+Java ${jdkVersion} starter project.
 

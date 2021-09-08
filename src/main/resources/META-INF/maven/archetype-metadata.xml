@@ -11,7 +11,7 @@
       <validationRegex>^yes$|^y$|^no$|^n$</validationRegex>
     </requiredProperty>
     <requiredProperty key="version">
-      <defaultValue>${version.replaceAll("^.*$", "1.0")}</defaultValue>
+      <defaultValue>${version.replaceAll("^.*$", "1.0.0")}</defaultValue>
       <validationRegex>^[0-9]+\.[0-9]+(\.[0-9]+)?$</validationRegex>
     </requiredProperty>
     <requiredProperty key="jdkVersion">

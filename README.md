@@ -12,9 +12,9 @@ PS: The archetype is not yet published to Maven central. Clone and build the pro
 ## How to use
 
 ```
-mvn archetype:generate -DarchetypeGroupId=no.dervis.maven \
+mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DarchetypeArtifactId=java-starter \
-                    -DarchetypeVersion=1.0 \
+                    -DarchetypeVersion=1.0.0 \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
