@@ -4,7 +4,7 @@
 
   <groupId>no.dervis</groupId>
   <artifactId>java-starter</artifactId>
-  <version>1.0.3-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>java-starter</name>
@@ -50,7 +50,6 @@
     <connection>scm:git:${repository.url}</connection>
     <developerConnection>scm:git:${repository.url}</developerConnection>
     <url>${repository.url}</url>
-    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
