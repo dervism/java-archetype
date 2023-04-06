@@ -81,12 +81,12 @@
         <version>3.0.0</version>
         <configuration>
           <useReleaseProfile>false</useReleaseProfile>
-          <releaseProfiles>extras,gpg</releaseProfiles>
+          <releaseProfiles>release-java-starter,extras,gpg</releaseProfiles>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
           <tagNameFormat>${project.name}-@{project.version}</tagNameFormat>
         </configuration>
       </plugin>
 
-      <!-- Setup plugin for deployment to Maven Central. -->
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -125,7 +125,6 @@
   </build>
 
   <profiles>
-    <!-- Creates additional artifacts that are required for deployment. -->
     <profile>
       <id>extras</id>
       <activation>
@@ -133,7 +132,6 @@
       </activation>
       <build>
         <plugins>
-          <!-- Create source code artifact. -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
@@ -147,7 +145,6 @@
               </execution>
             </executions>
           </plugin>
-          <!-- Create javadoc artifact. -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
@@ -163,7 +160,6 @@
         </plugins>
       </build>
     </profile>
-    <!-- Sign any created artifact. (Requires configuration of gpg on the executing machine.) -->
     <profile>
       <id>gpg</id>
       <activation>
@@ -171,7 +167,6 @@
       </activation>
       <build>
         <plugins>
-          <!-- Sign artifacts. -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
@@ -183,6 +178,9 @@
                   <goal>sign</goal>
                 </goals>
                 <configuration>
+                  <useAgent>true</useAgent>
+                  <keyname>${gpg.keyname}</keyname>
+                  <passphraseServerId>${gpg.keyname}</passphraseServerId>
                   <gpgArguments>
                     <arg>--pinentry-mode</arg>
                     <arg>loopback</arg>
