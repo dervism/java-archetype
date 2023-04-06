@@ -1,7 +1,7 @@
 # A simple Maven Archetype for Java
 ![Maven Central](https://img.shields.io/maven-central/v/no.dervis/java-starter?style=flat-square)
 
-Generates a Maven project with
+Generates a minimal Maven project for Java with
 
 - JDK 19
 - JUnit 5.9.2
