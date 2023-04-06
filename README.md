@@ -1,4 +1,4 @@
-# A simple Maven Archetype for Java 
+# A simple Maven Archetype for Java
 ![Maven Central](https://img.shields.io/maven-central/v/no.dervis/java-starter?style=flat-square)
 
 Generates a Maven project with
@@ -25,6 +25,9 @@ mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DjavaPreviewFeatures=yes \
                     -DinteractiveMode=false
 ```
+
+### Maven Central
+[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.6](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.6)
 
 ### Useful Maven commands for beginners
 #### Clean and compile
