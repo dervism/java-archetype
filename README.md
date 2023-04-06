@@ -8,16 +8,19 @@ Generates a Maven project with
 
 ## How to use
 
-Change the values of `DgroupId`, `-DartifactId` and `-Dversion` to match your own project details.
-
+### Selecting Java version
 Change the `jdkVersion` property to change the JDK version. Default value is currently `19`.
 
-Change the `javaPreviewFeatures` property to `no` or `n` if you want to disable preview features. Default value is `yes`
+### Activate/deactivate Java preview features
+Change the `javaPreviewFeatures` property to `no` or `n` if you want to disable preview features. Default value is `yes`, which means this archetype will generate a `pom.xml` file that allows you to use the newest preview features of Java.
+
+### Generating a new Java project from CLI
+Change the values of `DgroupId`, `-DartifactId` and `-Dversion` to match your own project details. These properties are required. `archetypeGroupId`, `archetypeArtifactId` and `archetypeVersion` must remain as is.
 
 ```
 mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DarchetypeArtifactId=java-starter \
-                    -DarchetypeVersion=1.0.6 \
+                    -DarchetypeVersion=1.0.7 \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
@@ -27,7 +30,7 @@ mvn archetype:generate -DarchetypeGroupId=no.dervis \
 ```
 
 ### Maven Central
-[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.6](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.6)
+[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.7](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.7)
 
 ### Useful Maven commands for beginners
 #### Clean and compile
