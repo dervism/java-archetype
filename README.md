@@ -16,7 +16,7 @@ Change the `javaPreviewFeatures` property to `no` or `n` if you want to disable 
 ```
 mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DarchetypeArtifactId=java-starter \
-                    -DarchetypeVersion=1.0.5 \
+                    -DarchetypeVersion=1.0.6 \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
