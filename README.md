@@ -1,4 +1,5 @@
-# A simple Maven Archetype for Java
+# A simple Maven Archetype for Java 
+![Maven Central](https://img.shields.io/maven-central/v/no.dervis/java-starter?style=flat-square)
 
 Generates a Maven project with
 
