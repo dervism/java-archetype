@@ -3,7 +3,7 @@
 
 Generates a minimal Maven project for Java with
 
-- JDK 19
+- JDK 20
 - JUnit 5.9.2
 
 ## How to use
@@ -24,7 +24,7 @@ mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
-                    -DjdkVersion=19 \
+                    -DjdkVersion=20 \
                     -DjavaPreviewFeatures=yes \
                     -DinteractiveMode=false
 ```
