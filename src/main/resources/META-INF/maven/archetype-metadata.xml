@@ -12,7 +12,6 @@
     </requiredProperty>
     <requiredProperty key="artifactId">
       <defaultValue>myapp</defaultValue>
-      <validationRegex>^[a-z][a-z0-9_]*(\.[a-z0-9_]+)+[0-9a-z_]$</validationRegex>
     </requiredProperty>
     <requiredProperty key="version">
       <defaultValue>1.0.0</defaultValue>
