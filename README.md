@@ -3,13 +3,13 @@
 
 Generates a minimal Maven project for Java with
 
-- JDK 22
+- JDK 22 (or any version you specify, read below)
 - JUnit 5.10.x
 
 ## How to use
 
 ### Selecting Java version
-Change the `jdkVersion` property to change the JDK version. Default value is currently `21`.
+Change the `jdkVersion` property to change the JDK version. Default value is currently `22`.
 
 ### Activate/deactivate Java preview features
 Change the `javaPreviewFeatures` property to `no` or `n` if you want to disable preview features. Default value is `yes`, which means this archetype will generate a `pom.xml` file that allows you to use the newest preview features of Java.
@@ -30,7 +30,7 @@ mvn archetype:generate -DarchetypeGroupId=no.dervis \
 ```
 
 ### Maven Central
-[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.11](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.11)
+[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.12](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.12)
 
 ### Useful Maven commands for beginners
 #### Clean and compile
