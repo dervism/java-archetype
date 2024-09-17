@@ -20,7 +20,7 @@ Change the values of `DgroupId`, `-DartifactId` and `-Dversion` to match your ow
 ```
 mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DarchetypeArtifactId=java-starter \
-                    -DarchetypeVersion=1.0.11 \
+                    -DarchetypeVersion=1.0.12 \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
