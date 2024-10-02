@@ -3,7 +3,7 @@
 
 Generates a minimal Maven project for Java with
 
-- JDK 22 (or any version you specify, read below)
+- JDK 23 (or any version you specify, read below)
 - JUnit 5.10.x
 
 ## How to use
@@ -20,17 +20,17 @@ Change the values of `DgroupId`, `-DartifactId` and `-Dversion` to match your ow
 ```
 mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DarchetypeArtifactId=java-starter \
-                    -DarchetypeVersion=1.0.12 \
+                    -DarchetypeVersion=1.0.13 \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
-                    -DjdkVersion=22 \
+                    -DjdkVersion=23 \
                     -DjavaPreviewFeatures=yes \
                     -DinteractiveMode=false
 ```
 
 ### Maven Central
-[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.12](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.12)
+[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.13](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.13)
 
 ### Useful Maven commands for beginners
 #### Clean and compile
