@@ -15,7 +15,7 @@
   <url>https://github.com/dervism/java-archetype</url>
 
   <properties>
-    <java.version>22</java.version>
+    <java.version>23</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -49,7 +49,7 @@
     <connection>scm:git:${repository.url}</connection>
     <developerConnection>scm:git:${repository.url}</developerConnection>
     <url>${repository.url}</url>
-    <tag>java-starter-1.0.10</tag>
+    <tag>java-starter-1.0.13</tag>
   </scm>
 
   <distributionManagement>
