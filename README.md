@@ -3,13 +3,13 @@
 
 Generates a minimal Maven project for Java with
 
-- JDK 23 (or any version you specify, read below)
-- JUnit 5.10.x
+- JDK 25 (or any version you specify, read below)
+- JUnit 5.11.x
 
 ## How to use
 
 ### Selecting Java version
-Change the `jdkVersion` property to change the JDK version. Default value is currently `22`.
+Change the `jdkVersion` property to change the JDK version. Default value is currently `25`.
 
 ### Activate/deactivate Java preview features
 Change the `javaPreviewFeatures` property to `no` or `n` if you want to disable preview features. Default value is `yes`, which means this archetype will generate a `pom.xml` file that allows you to use the newest preview features of Java.
@@ -20,11 +20,11 @@ Change the values of `DgroupId`, `-DartifactId` and `-Dversion` to match your ow
 ```
 mvn archetype:generate -DarchetypeGroupId=no.dervis \
                     -DarchetypeArtifactId=java-starter \
-                    -DarchetypeVersion=1.0.13 \
+                    -DarchetypeVersion=1.0.14 \
                     -DgroupId=org.mygroup \
                     -DartifactId=demoapp \
                     -Dversion=1.0.0 \
-                    -DjdkVersion=23 \
+                    -DjdkVersion=25 \
                     -DjavaPreviewFeatures=yes \
                     -DinteractiveMode=false
 ```
