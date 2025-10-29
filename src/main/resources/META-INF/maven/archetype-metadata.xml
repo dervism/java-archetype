@@ -22,7 +22,7 @@
       <validationRegex>^yes$|^y$|^no$|^n$</validationRegex>
     </requiredProperty>
     <requiredProperty key="jdkVersion">
-      <defaultValue>23</defaultValue>
+      <defaultValue>25</defaultValue>
       <validationRegex>([89]|[1-9][0-9]|100)</validationRegex>
     </requiredProperty>
   </requiredProperties>
