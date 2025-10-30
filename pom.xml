@@ -81,7 +81,7 @@
         <version>3.1.1</version>
         <configuration>
           <useReleaseProfile>false</useReleaseProfile>
-          <releaseProfiles>release-java-starter,extras,gpg</releaseProfiles>
+          <releaseProfiles>extras,gpg</releaseProfiles>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <tagNameFormat>${project.name}-@{project.version}</tagNameFormat>
         </configuration>
