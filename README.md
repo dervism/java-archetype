@@ -30,7 +30,7 @@ mvn archetype:generate -DarchetypeGroupId=no.dervis \
 ```
 
 ### Maven Central
-[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.13](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.13)
+[https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.14](https://central.sonatype.com/artifact/no.dervis/java-starter/1.0.14)
 
 ### Useful Maven commands for beginners
 #### Clean and compile
