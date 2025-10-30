@@ -52,3 +52,22 @@ mvn archetype:generate -DarchetypeGroupId=no.dervis \
 
 #### Updating dependencies to the latest version
 - mvn versions:use-latest-releases
+
+### Rolling back a failed release
+If a release started with the Maven Release Plugin fails or needs to be reverted, you can run the provided rollback script:
+
+- ./rollback.sh — rolls back the Maven release state (restores pom.xml from backups, removes temporary release files)
+- ./rollback.sh --delete-tag — additionally deletes the created Git tag locally
+- ./rollback.sh --delete-remote-tag — deletes the created Git tag both locally and on the configured Git remote (origin by default)
+
+Notes:
+- The script reads the tag name from release.properties (key: scm.tag).
+- It is safe to run multiple times; if there is nothing to roll back or the tag does not exist, it will continue with a warning.
+
+### Releasing (with dry run option)
+You can run the release using the Maven Release Plugin via the provided script:
+
+- Actual release: `./release.sh`
+- Dry run (no tags/commits/push; validates that everything is ready): `./release.sh --dry-run` or `./release.sh -n`
+
+Dry run runs `mvn release:prepare -DdryRun=true` so you can verify versions, SCM configuration, and checks without modifying your repository. When it completes successfully, run the script again without `--dry-run` to perform the actual release.
