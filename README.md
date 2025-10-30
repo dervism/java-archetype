@@ -71,3 +71,7 @@ You can run the release using the Maven Release Plugin via the provided script:
 - Dry run (no tags/commits/push; validates that everything is ready): `./release.sh --dry-run` or `./release.sh -n`
 
 Dry run runs `mvn release:prepare -DdryRun=true` so you can verify versions, SCM configuration, and checks without modifying your repository. When it completes successfully, run the script again without `--dry-run` to perform the actual release.
+
+### Release guide
+
+https://dev.to/selmaguedidi/publishing-your-java-library-to-maven-central-15in
